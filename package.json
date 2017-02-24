@@ -1,10 +1,15 @@
 {
   "name": "thizz",
   "description": "thizz",
+  "version": "1.0.0",
+  "engines": {
+    "node": "7.0.0"
+  },
   "main": "index.js",
   "repository": "https://github.com/wowcallmia/thizz.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall":"./node_modules install"
     "start": "if test \"$NODE_ENV\" = \"production\" ; then npm run start-prod; else npm run start-dev; fi ",
     "start-dev": "npm run open:dev",
     "start-prod": "babel-node ./tools/distServer.js",
