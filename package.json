@@ -9,10 +9,10 @@
   "repository": "https://github.com/wowcallmia/thizz.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "if test \"$NODE_ENV\" = \"production\" ; then npm run start-dev; else npm run start-prod; fi ",
+    "start": "if test \"$NODE_ENV\" = \"production\" ; then npm run start-dev; else npm run start-dev; fi ",
     "start-dev": "npm run open:dev",
     "start-prod": "babel-node ./tools/distServer.js",
-    "open:dev": "babel-node ./server/server.js",
+    "open:dev": "babel-watch ./server/server.js",
     "open:dist": "babel-node ./tools/distServer.js",
     "remove-dist": "rimraf ./dist && mkdir dist",
     "copy-images": "copyfiles -u 1 './src/Images/**' ./dist/",
