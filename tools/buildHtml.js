@@ -10,7 +10,7 @@ fs.readFile('src/index.html', (err, markup) => {
 
   $('head').append('<link rel="stylesheet" href="styles.min.css" />');
 
-  fs.writeFile('src/index.html', $.html(), 'utf8', (error) => {
+  fs.writeFile('dist/index.html', $.html(), 'utf8', (error) => {
     process.stdout.write('\n');
     if (error) return process.stdout.write(`❌  fs.readFile ERROR: ${error}`.red.bold);
     return process.stdout.write('\n ✅  index.html written to "/dist"\n'.green.bold);

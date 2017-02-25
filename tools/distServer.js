@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/api', api);
-app.get('*', (req, res) => res.sendFile(path.resolve('src/index.html')));
+app.get('*', (req, res) => res.sendFile(path.resolve('dist/index.html')));
 
 // --------------------------- Listeners ---------------------------------------
 const PORT = process.env.PORT || 3000;
