@@ -32,9 +32,12 @@ const devConfig = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
+        loader: 'babel',
         exclude: /(node_modules|bower_components)/,
         include: path.resolve('src'),
+        query: {
+          presets: ['es2015'],
+        },
       },
       {
         test: /\.s[ac]ss$/,
